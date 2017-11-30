@@ -1,14 +1,16 @@
 <?php
 
-$hostname = "localhost";
+$server = "localhost";
+$banco = "bank";
 $usuario = "root";
 $senha = "";
-$database = "bank";
 
-$conexao = mysqli_connect("$hostname, $usuario, $senha, $database");
+$conexao = mysqli_connect('localhost','root','','bank');
 
-if(!conexao){
-	echo "Falha na conexão com o banco de dados";
+
+
+if(!$conexao){
+	echo mysqli_error(); exit();
 }
 
 
